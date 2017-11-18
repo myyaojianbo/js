@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+    	* {
+    		margin: 0;
+    		padding: 0;
+    	}
+    	body {
+    		background: url(images/1.jpg) top center;
+    	}
+    	div {
+    		height:140px;
+    		text-align: center;
+    		line-height:50px; 
+    		background: rgba(255,255,255,0.5);
+    		padding-top: 60px;
+    	}
+    </style>
+    <script>
+    	window.onload = function(){
+    		var pic1 = document.getElementById("pic1");
+    		var pic2 = document.getElementById("pic2");
+    		var pic3 = document.getElementById("pic3");
+    		pic1.onclick = function(){
+    			document.body.style.backgroundImage = "url(images/1.jpg)";
+    		}
+    		pic2.onclick = function(){
+    			document.body.style.backgroundImage = "url(images/2.jpg)";
+    		}
+    		pic3.onclick = function(){
+    			document.body.style.backgroundImage = "url(images/3.jpg)";
+    		}
+    	}
+    </script>
+</head>
+<body>
+	<div>   
+		<img src="images/1.jpg" id="pic1"  width=100px;/>
+    	<img src="images/2.jpg" id="pic2"  width=100px;/>
+    	<img src="images/3.jpg" id="pic3"  width=100px;/>
+    </div>
+</body>
+</htm3

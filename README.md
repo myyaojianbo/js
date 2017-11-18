@@ -1,1 +1,21 @@
 # js
+### 01shizhong:利用日期函数实现网页时钟
+### 02xuanzhuanmuma:利用数组、动画实现旋转木马式轮播图
+### 03qqweibo:利用jQuery操作DOM节点模拟QQ微博界面
+### 04game：利用setTimeout/setInterval实现打地鼠游戏
+### 05baiduxingzuo:利用面向对象简单实现百度星座页面
+### 06shangcheng:利用面向对象简单实现商城产品详细信息页面
+
+## 基本js
+### 01qiehuanpifu:利用JS简单模拟切换皮肤背景
+### 02tupianzhanshi:利于函数实现商品图片展示功能
+###	03rili:利用日期函数实现简单日期功显示能
+### 04daojishi:利用日期函数实现倒计时功能
+### 05tupianfangda:利用client、offset实现放大产品图片功能
+### 06guanbi360chuangkou:利用简单动画函数模拟关闭360开机提示小窗口
+### 07lunbotu:利用循环语句、动画函数以及定时器实现轮播图效果
+### 08tablan:利用jQuery实现tab栏切换效果
+### 09wangzhan:利用jQuery常用选择器实现综合网站页面
+### 10wuxing:利用jQuery常用选择器实现五星评价功小能
+### 11form：利用jQuery拼接字符串实现自动生成表格
+### 12xuanzechengshi:利用jQuery常用选择器实现选择城市功能

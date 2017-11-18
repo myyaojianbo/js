@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+    	*{
+    		margin: 0;
+    		padding: 0;
+    	}
+    	#box{
+    		overflow: hidden;
+    		height: 70px;
+    		width: 360px;
+    		padding-top: 360px;
+    		margin: 100px auto;
+    		background:url(images/01big.jpg) no-repeat;
+    		border: 1px solid #000;
+    	}
+    	#box ul{
+    		overflow: hidden;
+    		list-style: none;
+    	}
+    	#box ul li{
+    		float: left;
+    	/*	height: 70px;
+    		cursor: pointer;*/
+    	}
+    </style>
+    <script type="text/javascript">
+    	window.onload = function(){
+    		var box = document.getElementById("box");
+    		function fn(li,bg){
+    			var target = document.getElementById(li);
+    			target.onmouseover = function () {
+    				box.style.backgroundImage = bg;
+    			}
+    		}
+    		fn("li01","url(images/01big.jpg)");
+    		fn("li02","url(images/02big.jpg)");
+    		fn("li03","url(images/03big.jpg)");
+    		fn("li04","url(images/04big.jpg)");
+    		fn("li05","url(images/05big.jpg)");
+    	}
+    </script>
+</head>
+<body>
+	<div id="box">
+		<ul>
+			<li id="li01"><img src="images/01.jpg"></li>
+			<li id="li02"><img src="images/02.jpg"></li>
+			<li id="li03"><img src="images/03.jpg"></li>
+			<li id="li04"><img src="images/04.jpg"></li>
+			<li id="li05"><img src="images/05.jpg"></li>
+		</ul>
+	</div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {margin: 0;padding: 0;}
+        .box {
+            width: 350px;
+            height: 350px;
+            margin:100px;
+            border: 1px solid #ccc;
+            position: relative;
+        }
+        .big {
+            width: 450px;
+            height: 450px;
+            position: absolute;
+            top: 0;
+            left: 360px;
+            border: 1px solid #ccc;
+            overflow: hidden;
+            display: none;
+        }
+        .big img{
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .mask {
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 0, 0.4);
+            position: absolute;
+            top: 0;
+            left: 0;
+            cursor: move;
+            display: none;
+        }
+        .small {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+<div class="box" id="fdj">
+    <!--小盒子-->
+    <div class="small">
+        <img src="images/001.jpg" alt=""/>
+        <div class="mask"></div>
+    </div>
+    <div class="big">
+        <img src="images/0001.jpg" alt=""/>
+    </div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+    var fdj = document.getElementById("fdj");
+    var small = fdj.children[0];
+    var big = fdj.children[1];
+    var mask = small.children[1];
+    var bigImages = big.children[0];
+    //第一阶段，显示隐藏
+    small.onmouseover = function(){
+        mask.style.display = "block";
+        big.style.display = "block";
+    }
+    small.onmouseout = function(){
+        mask.style.display = "none";
+        big.style.display = "none";
+    }
+
+    //第二阶段，跟随鼠标移动
+    var x=0;
+    var y=0;
+    small.onmousemove = function(event){
+        var event = event || window.event;
+        x = event.clientX - fdj.offsetLeft - mask.offsetWidth/2;
+        y = event.clientY - fdj.offsetTop - mask.offsetHeight/2;
+        if(x<0){
+            x=0;
+        }
+        if(x>small.offsetWidth-mask.offsetWidth){
+            x=small.offsetWidth-mask.offsetWidth
+        }
+        if(y<0){
+            y=0;
+        }
+        if(y>small.offsetHeight-mask.offsetHeight){
+            y=small.offsetHeight-mask.offsetHeight
+        }
+        mask.style.left = x+"px";
+        mask.style.top = y+"px";
+        //大盒子内图片跟随移动，定位，计算倍数
+        bigImages.style.left = -x*big.offsetWidth/small.offsetWidth + "px";
+        bigImages.style.top = -y*big.offsetHeight/small.offsetHeight + "px";
+    }
+</script>

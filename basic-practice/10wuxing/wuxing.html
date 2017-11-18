@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>五角星评论案例</title>
+	<style>
+		* { padding: 0; margin: 0; }
+		.comment {
+			font-size: 40px;
+			color: red;			
+		}
+		.comment li {
+			float: left;
+		}
+		ul { list-style: none;}
+	</style>
+	<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			var wujiaoxing1= "☆"
+			var wujiaoxing2= "★"
+			$('li').on('mouseenter',function(e){
+				// $(this).html(wujiaoxing2).prevAll().html(wujiaoxing2)
+				// $(this).nextAll().html(wujiaoxing1)
+				$(this).html(wujiaoxing2)
+						.prevAll().html(wujiaoxing2)
+						.end().nextAll().html(wujiaoxing1)
+
+			}).on('click',function(){
+				$(this).addClass('clicked')
+						.siblings().removeClass('clicked')
+			})
+
+			$('.comment').on('mouseleave',function(){
+				//移开的时候，先重置再找clicked样式
+				$('li').html(wujiaoxing1)
+				$('.clicked').html(wujiaoxing2)
+							.prevAll().html(wujiaoxing2)
+							.end().nextAll().html(wujiaoxing1)
+			})
+		})	
+	</script>
+</head>
+<body>
+	<ul class="comment">
+		<li>☆</li>
+		<li>☆</li>
+		<li>☆</li>
+		<li>☆</li>
+		<li>☆</li>
+	</ul>
+</body> 
+</html>
