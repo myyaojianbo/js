@@ -5,6 +5,9 @@
 ### 04game：利用setTimeout/setInterval实现打地鼠游戏
 ### 05baiduxingzuo:利用面向对象简单实现百度星座页面
 ### 06shangcheng:利用面向对象简单实现商城产品详细信息页面
+### 07animate：利用JS封装多属性动画函数
+### 08ajax:封装原生ajax
+### 09frame:利用函数封装自己的简单小框架
 
 ## 基本js
 ### 01qiehuanpifu:利用JS简单模拟切换皮肤背景
