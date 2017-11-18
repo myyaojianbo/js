@@ -20,7 +20,7 @@ function animate(obj,json,fn){
 					if("opacity" in obj.style){     //判断浏览器是否支持opacity
 						obj.style.opacity = (current+step)/100;
 					}else{
-						obj.style.filter = "alpha(opacity="+(current+step)*10+")"; //为什么*10？
+						obj.style.filter = "alpha(opacity="+(current+step)+")"; 
 					}
 				} 
 //5.判断是否有zIndex
